@@ -5,30 +5,37 @@
 
 using namespace std;
 
+/*
+
+*En esta clase se crean objtos de tipo Arma en base a la informacion
+*de GTAV
+
+*/
+
+
 class Arma {
 
-private:
-  string nombre,type;
-  float overall;
-  int damage,fire_rate,accuracy,range;
-  int price;
-public:
+  private:
+    string nombre,type;
+    float overall;
+    int damage,fire_rate,accuracy,range;
+    int price;
+  public:
 
-  Arma(string nombre,string type,int overall,int damage,int fire_rate,
-    int accuracy,int range, int price);
-  string GetNombre(){return nombre;}
-  string GetType(){return type;}
-  float GetOverall(){return overall;}
-  int GetDamage(){return damage;}
-  int GetFire(){return fire_rate;}
-  int GetAcurracy(){return accuracy;}
-  int GetRange(){return range;}
-  int GetPrice(){return price;}
-
-  void GenerarArma();
+    Arma(string nombre,string type,int overall,int damage,int fire_rate,
+      int accuracy,int range, int price);
+    string GetNombre(){return nombre;}
+    string GetType(){return type;}
+    float GetOverall(){return overall;}
+    int GetDamage(){return damage;}
+    int GetFire(){return fire_rate;}
+    int GetAcurracy(){return accuracy;}
+    int GetRange(){return range;}
+    int GetPrice(){return price;}
+    void GenerarArma();
 };
 
-
+//Desarolo del Constructor
 Arma :: Arma(string nombre,string type,int overall,int damage,
   int fire_rate,int accuracy,int range, int price){
 
@@ -42,7 +49,7 @@ Arma :: Arma(string nombre,string type,int overall,int damage,
   this->price = price;
 
 }
-
+//Metodo para generar el arma 
 void Arma :: GenerarArma(){
 
   cout << nombre << "-"<< type << "-" << overall<<"-"<<damage<<

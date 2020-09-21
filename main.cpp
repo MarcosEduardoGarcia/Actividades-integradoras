@@ -11,9 +11,7 @@ void Filtrar();
 
 int main(){
 
-
   menu();
-
 
   return 0;
 }
@@ -182,6 +180,4 @@ void Filtrar(){
     }
 
   }while(opcion != 0);
-
-
 }
