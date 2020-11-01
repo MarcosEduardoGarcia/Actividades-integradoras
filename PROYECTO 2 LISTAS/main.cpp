@@ -12,7 +12,6 @@ ITESM
 using namespace std;
 //Prototipo de funcion a usar en el main
 void menu();
-void Ordenar(Base* principal);
 void Filtrar();
 
 int main(){
