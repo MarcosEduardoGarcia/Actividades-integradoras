@@ -21,6 +21,19 @@ Para consola Linux basta con g++  mainCasosPrueba.cpp y posteriormente ./a.out
 
 En este se especifican casos de funcionamiento que son validados ahi mismo y se pueden revalidar accediendo al archivo GTAV PROGRA.txt
 
+# Funcionamiento del main 
+
+En el main principal se cuenta con un menu con tres opciones 
+
+- Mostrar armas restantes en la maquina
+- Maquina
+- Guardar progreso
+
+Mediante la primera se podran consultar las armas que hay en el heap
+
+En la opcion Maquina se podran ir sacando las armas conforme las saquemos del dispensador seran removidas del heap y se puede checar regresando a la opcion 1
+
+Por ultimo en guardar progreso se generara un archivo .txt que contendra las armas que quedaron en el heap
 
 # Analisis de conmplejidad de las funciones usadas 
 
