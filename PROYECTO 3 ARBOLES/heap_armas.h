@@ -10,7 +10,7 @@
 
 using namespace std;
 
-
+//CLASE HEAP
 class Heap{
 private:
   Arma *arreglo[100];
@@ -35,11 +35,10 @@ public:
 };
 
 //Constructor
-
 Heap::Heap(){
   size_heap = 0;
 }
-
+//Funcion auxiliar de intercambio de valores en el arreglo
 void Heap::intercambia(unsigned int i, unsigned int j) {
 	Arma *aux = arreglo[i];
 	arreglo[i] = arreglo[j];
@@ -64,7 +63,7 @@ unsigned int Heap::hijo_der(unsigned int pos) {
 	return ((2 * pos) + 2);
 }
 
-
+//Funcion recursiva para realizar el heapify del heapify_pop
 void Heap::heapify_pop(unsigned int posicion){
   unsigned int izquierdo =  hijo_izq(posicion);
   unsigned int derecho = hijo_der(posicion);
@@ -83,7 +82,7 @@ void Heap::heapify_pop(unsigned int posicion){
   }
 }
 
-
+//Funcion recursiva para realizar el heapify_push
 void Heap::heapify_push(unsigned int posicion){
 
   if (posicion && arreglo[posicion]->GetOverall() < arreglo[padre(posicion)]->GetOverall()){
@@ -92,7 +91,7 @@ void Heap::heapify_push(unsigned int posicion){
   }
 }
 
-
+//Funcion push principal para insertar un nuevo objeto al heap
 void Heap::push(Arma *objeto){
 
   unsigned int pos = size_heap;
@@ -101,7 +100,7 @@ void Heap::push(Arma *objeto){
   heapify_push(pos);
 }
 
-
+//Funcion pop principal para remover un objeto del heap siempre el menor
 void Heap::pop(){
   if (empty()){
     cout << "No exiten mas armas"<<endl;
@@ -111,23 +110,29 @@ void Heap::pop(){
   heapify_pop(0);
 }
 
-
+//Funciona booleana que regresa un true o false
 bool Heap::empty() {
 	return (size_heap == 0);
 }
 
-
+//Funcion que regresa el tamaño del heap
 unsigned int Heap::size(){
   return (size_heap);
 }
 
-
+//Nos regresa el objeto que esta en el top del heap
 void Heap::top(){
   arreglo[0]->GenerarArma();
 }
 
 
+/*
 
+Mediante esta funcion hacemos lectura del archivo .txt
+mediante un while recorremos el archivo hasta que dejemos dejemos de
+encontrar lineas con contenido y se crean objetos Arma para añadirlos al heap
+
+*/
 void Heap::CargarHeap(){
   ifstream myFileStream("GTAV PROGRA.txt");
   if(!myFileStream.is_open()){
@@ -174,7 +179,7 @@ void Heap::CargarHeap(){
   myFileStream.close();
 }
 
-
+//Convierte el heap a string para imprimir en consola
 string Heap::toString() const {
 	stringstream aux;
 	//aux << "[";
@@ -187,7 +192,7 @@ string Heap::toString() const {
   //aux << "]";
 	return aux.str();
 }
-
+//Escribe en un archivo de texto lo que este en el heap
 void Heap :: SaveData(){
   ofstream Archivo;
   Archivo.open("Salida.txt");

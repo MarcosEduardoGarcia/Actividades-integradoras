@@ -1,3 +1,13 @@
+/*
+
+Macos Eduardo Garcia Ortiz
+A01276213
+ITESM QRO
+02/11/20
+
+*/
+
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -5,15 +15,25 @@
 #include "Arma.h"
 
 using namespace std;
-
+//Prototipo de funciones
 void menu();
 void DarArma(Heap* original);
+
 int main(){
 
   menu();
 
   return 0;
 }
+
+/*
+
+*Funcion que carga el menu con las funciones a usar
+*1.- Dara el estado del heap
+*2.- Permitira sacar armas del Dispensador
+*3.- Nos permitira escribir en un .txt lo que falte por sacar del dispensador
+
+*/
 
 void menu(){
 
@@ -60,7 +80,13 @@ void menu(){
   }while(opcion != 0);
 }
 
+/*
 
+*Funcion recibe como parametro un objeto por puntero
+*Nos permitirá mostrar las armas y conforme se saquen se irán borrando del
+*heap hasta que demos salir o se agoten las armas
+
+*/
 void DarArma(Heap *original){
   int opcion=0;
   do{

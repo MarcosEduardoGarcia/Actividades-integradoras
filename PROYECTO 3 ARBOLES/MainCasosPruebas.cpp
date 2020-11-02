@@ -5,6 +5,13 @@
 
 using namespace std;
 
+/*
+
+ Main con casos prueba para verificar el funcionamiento del heap
+ incluyendo las funciones y output esperado.
+
+*/
+
 int main(){
 
   Heap *Pruebas = new Heap();
