@@ -4,10 +4,9 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-
 #include "Arma.h"
-
 using namespace std;
+
 /*
 
 *En esta clase se generan objetos de tipo Base que guardaran en un arreglo
@@ -52,7 +51,6 @@ void Base :: Intercambia(int num1,int num2){
 
   BaseArmas[num1] = BaseArmas[num2];
   BaseArmas[num2] = aux[0];
-
 }
 
 /*
@@ -76,7 +74,7 @@ void Base :: CargarBaseArmas(){  //leer el cvs
 
     string nombre = "";
     string type = "";
-    string tempoverall = "";
+    std::string tempoverall = "";
     string tempdamage = "";
     string tempfire = "";
     string tempaccuracy = "";
@@ -90,8 +88,8 @@ void Base :: CargarBaseArmas(){  //leer el cvs
     stringstream ss(line);
     getline(ss,nombre, ',');
     getline(ss,type, ',');
-    getline(ss, tempoverall,',');
-    overall = stof(tempoverall);
+    getline(ss,tempoverall,',');
+    overall = std::stof(tempoverall);
     getline(ss,tempdamage,',');
     damage = stoi(tempdamage);
     getline(ss,tempfire,',');

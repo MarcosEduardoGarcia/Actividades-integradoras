@@ -54,7 +54,7 @@ void menu(){
         break;
       case 4:
         char opcion;
-        cout << "Advertencia esto guadara en un archivo de texto llamado salida la informacion en el ultimo orden usado"<<endl;
+        cout << "Advertencia esto guadara en un archivo de texto llamado salida la informacion en el ultimo orden usado en la opcion ordenar"<<endl;
         cout << "¿Desea continuar? s/n:  ";
         cin >>opcion;
         if (opcion == 's'){
