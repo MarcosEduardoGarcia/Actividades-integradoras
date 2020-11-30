@@ -1,10 +1,16 @@
+/*
+
+Marcos Eduardo Garcia Ortiz A01276213
+ITESM
+
+*/
 #include <iostream>
 #include <fstream>
 #include "Arma.h"
 #include "Base.h"
 
 using namespace std;
-
+//Prototipo de funciones
 void menu();
 void Ordenar(Base* principal);
 void Filtrar();
@@ -15,7 +21,11 @@ int main(){
 
   return 0;
 }
+/*
 
+Funcion menu la cual contiene las opciones principales a usar
+
+*/
 void menu(){
 
   Base *principal = new Base();
@@ -67,7 +77,13 @@ void menu(){
     }
   }while(opcion != 0);
 }
+/*
 
+Ordener recibe como parametro un apuntador al objeto Base
+para asi evitar generar un nuevo objeto manipulando siempre el mismo
+Aqui se orden las armas en base a los distintos atributos
+
+*/
 void Ordenar(Base *principal){
 
   int opcion = 0;
@@ -124,7 +140,11 @@ void Ordenar(Base *principal){
   }while(opcion!=0);
 }
 
+/*
 
+Funcion filtar se usa para poder obtener las armas por el atributo Tipo
+
+*/
 void Filtrar(){
 
   Base *Sec = new Base();

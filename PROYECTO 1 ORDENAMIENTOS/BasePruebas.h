@@ -118,9 +118,14 @@ void Base :: MostrarBase(){
 
   cout << "ARMA" << "  TYPE" << "  OVERALL"<<"  DAMAGE"<<"  FIRE RATE"<<"  ACCURACY"<<"  RANGE"<<"  PRICE"<<endl;
   cout << endl;
-  for (int i=0;i<contador;i++){
+  for (int i=0;i<3;i++){
     cout << i << " ";
     BaseArmas[i]->GenerarArma();
+    cout << endl;
+  }
+  for (int j=87;j<contador;j++){
+    cout << j << " ";
+    BaseArmas[j]->GenerarArma();
     cout << endl;
   }
 }
@@ -135,7 +140,7 @@ void Base :: MostrarBase(){
 void Base :: SaveData(){
 
   ofstream Archivo;
-  Archivo.open("Salida.txt");
+  Archivo.open("Salida Pruebas.txt");
   Archivo << "ARMA" << "  TYPE" << "  OVERALL"<<"  DAMAGE"<<"  FIRE RATE"<<"  ACCURACY"<<"  RANGE"<<"  PRICE"<<endl;
   for (int i = 0; i<contador ; i++){
 
