@@ -22,7 +22,7 @@ class Arma {
     int price;
   public:
 
-    Arma(string nombre,string type,int overall,int damage,int fire_rate,
+    Arma(string nombre,string type,float overall,int damage,int fire_rate,
       int accuracy,int range, int price);
     string GetNombre(){return nombre;}
     string GetType(){return type;}
@@ -36,7 +36,7 @@ class Arma {
 };
 
 //Desarolo del Constructor
-Arma :: Arma(string nombre,string type,int overall,int damage,
+Arma :: Arma(string nombre,string type,float overall,int damage,
   int fire_rate,int accuracy,int range, int price){
 
   this->nombre = nombre;
@@ -49,7 +49,7 @@ Arma :: Arma(string nombre,string type,int overall,int damage,
   this->price = price;
 
 }
-//Metodo para generar el arma 
+//Metodo para generar el arma
 void Arma :: GenerarArma(){
 
   cout << nombre << "-"<< type << "-" << overall<<"-"<<damage<<
