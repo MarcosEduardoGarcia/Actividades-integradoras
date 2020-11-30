@@ -1,6 +1,16 @@
 # Analizador de jugadas para el NBA2K21
 
-Debido al lanzamiento de las consolas de nueva generación como Xbox Series X y Playstation 5 los juegos se vuelven cada vez mas realistas y apegados a la realidad en este proyecto se pretende analizar los pases que pueden ser dados en los partidos de BasketBall en el nuevo videojuego NBA2K21
+Debido al lanzamiento de las consolas de nueva generación como Xbox Series X y Playstation 5 los juegos se vuelven cada vez mas detallados y apegados a la realidad en este proyecto se pretende analizar los pases que pueden ser dados en los partidos de BasketBall en el nuevo videojuego NBA2K21
+
+Los jugadores juegan dentro de una alineación
+
+- Punta
+- 2 alas
+- 2 postes
+
+Cada jugador ocupa una posicion especifica a lo largo de todo el juego es por ello que cada uno de ellos lo podemos ver como un nodo, y estan conectados con los demas jugadores de manera que sean pases reales es decir un poste puede pasar el balon a un ala pero un poste no podra pasar balon al jugador en punta pues este se encontrará sumamente lejos e infringiria las reglas en este simulador se pretende ilustrar jugadas cortas y largas que pueden ser ejecutadas entre los diferentes jugadores.
+
+Se presenta un menu con el que es posible interactuar y se presenta la alineacion de los lakers con sus jugadores donde se podra experimentar maneras de realizar pases entre los jugadores.
 
 # Especificaciones técnicas
 
