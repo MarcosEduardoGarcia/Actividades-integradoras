@@ -101,7 +101,12 @@ int main(){
   Pruebas->BusqAtrib("ASSAULT RIFLES");
   cout << endl;
   cout << "Si se intenta con cualquier otro de los parametros permitidos\nse puede comprobar que solo saldran las armas de ese tipo"<<endl;
-
+  cout << endl;
+  cout << endl;
+  cout << "**************************************************************************"<<endl;
+  cout << "4 SaveData()\n"<<endl;
+  cout << "Se guarda en un archivo de salida la lista asegurando que no sufrio alguna modificacion "<<endl;
+  Pruebas->SaveData();
   delete Pruebas;
 
   return 0;
