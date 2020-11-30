@@ -21,6 +21,8 @@ El programa esta diseñado mediante POO los objetos serán creados con la inform
 
 # Casos prueba/Funcionamiento del programa
 
+**Se incluye un segundo main nombrado como mainCasosPrueba.cpp al compilarlo y correrlo se mostraran mas casos prueba especificados claramente** 
+
 El programa al compliar y correr genera un menú en el cual se presentan cuatro opciones
 
 **1.- Mostrar la Base de Armas Original:** Al introducir un 1 se mostraran todas las armas de forma aleatoria obtenidas directamente de GTAV.txt presentadas con un mejor formato pues el orignal es presentado en datos separados por comas.
