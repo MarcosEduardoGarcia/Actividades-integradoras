@@ -187,7 +187,7 @@ Buscar el 17 en el siguiente BTree de orden 3
   - Buscar valores
   - Imprimr Recorrido (Este se realiza de la misma forma que se haria inorder) para observar que los nodos estan en la estructura 
   
-  Al compilar el mainProyecto se mostrara una pequeña aplicación cargando las armas del gtaV de entregas anteriores pudiendo verlas todas, eliminarlas, hacer busquedas y guardar lo que quede en la estrcutura de Btree comprobando el uso de esta estructura
+  Al compilar el mainProyecto se mostrara una pequeña aplicación cargando las armas del gtaV de entregas anteriores pudiendo verlas todas, eliminarlas, hacer busquedas y guardar lo que quede en la estructura de Btree comprobando el uso de esta.
   
   # Referencias 
   
