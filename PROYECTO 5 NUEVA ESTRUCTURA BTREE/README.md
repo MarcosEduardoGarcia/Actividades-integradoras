@@ -19,4 +19,27 @@ Esta es considerada una estructura avanzada que generaliza el Binary Search Tree
                                                  |     |      |      |      |
                                                  ▼     ▼      ▼      ▼      ▼
                                                  
-* 
+* Todas las hojas deben estar del arbol deben estar al mismo nivel 
+
+                                                 o                            o
+                                                / \                          / \
+                                               o   o                        /   \
+                                              /   / \                      o     o
+                                             o   o   o                    / \   / \
+                                            / \                          o   o o   o
+                                           o   o
+                                                \
+                                                 o
+                                             No permitido                  Permitido 
+                                             
+                                             
+ * Cada nodo (excepto raíz) tiene como mínimo (M)/2 claves.
+ * El arbol esta ordenado en orden creciente 
+                                                
+# Ejemplo de BTree 
+
+<img width="448" alt="output253" src="https://user-images.githubusercontent.com/65368636/100991604-cecd9980-3518-11eb-833a-107f0c448745.png">
+                                                
+                                                
+                                                
+                                            
