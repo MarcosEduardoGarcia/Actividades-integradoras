@@ -96,7 +96,7 @@ Buscar el 17 en el siguiente BTree de orden 3
  
   <img src="Imagenes/search6.png" width="230">
   
-  # remove
+  # Remove
   
   Talvez esta represente la funcion mas elaborada debido a los multiples casos que se presentan 
   
@@ -112,7 +112,11 @@ Buscar el 17 en el siguiente BTree de orden 3
       - Primero, vistamos al sibling izquierdo si tiene mas del numero mínimo de nodos tomamos uno
       - Sino ahora checamos al sibling derecho 
       
-      Si los dos nodos hermanos inmediatos ya tienen un número mínimo de claves, aplicamos un merge con el nodo hermano izquierdo o el nodo hermano derecho. Esta fusión se             realiza a través del nodo padre.
+      Si los dos nodos hermanos inmediatos ya tienen un número mínimo de claves, aplicamos un merge con el nodo hermano 
+      
+      izquierdo o el nodo hermano derecho.
+      
+      Esta fusión se realiza a través del nodo padre.
   
   **Caso II**
   
@@ -133,7 +137,9 @@ Buscar el 17 en el siguiente BTree de orden 3
   Si la llave de destino se encuentra en un nodo interno, y la eliminación de la llave conduce a una menor cantidad de llaves en el nodo (es decir, menos del mínimo requerido),   busque el predecesor en orden y el sucesor en orden. Si ambos niños contienen un número mínimo de llaves, no se podrá realizar el préstamo. Esto lleva al Caso II (3)
  
  
-  Nuevamente, busque al hermano para que le preste una llave. Pero, si el hermano también tiene solo un número mínimo de claves, combine el nodo con el hermano junto con el       padre. Organice a los niños en orden creciente
+  Nuevamente, busque al hermano para que le preste una llave. Pero, si el hermano también tiene solo un número mínimo de claves,
+  combine el nodo con el hermano junto con el padre. 
+  Organice a los niños en orden creciente
   
   **Ejemplos**
   
@@ -146,7 +152,7 @@ Buscar el 17 en el siguiente BTree de orden 3
   
   Como pudimos observar la diferencia entre este tipo de arbol y el resto es el hecho de poder guardar mas de un valor en un nodo lo que reduce considerablemente la altura del     árbol y esto se tradujo en que cada nodo ocupe un bloque de disco, o un tamaño análogo en el dispositivo, aumentando la eficacia.
   
-  **Aplicaciones Reales**
+  # Aplicaciones Reales
   
   Bases de datos:
   
