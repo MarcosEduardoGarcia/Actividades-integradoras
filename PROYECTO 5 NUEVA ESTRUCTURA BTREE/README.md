@@ -34,12 +34,29 @@ Esta es considerada una estructura avanzada que generaliza el Binary Search Tree
                                              
                                              
  * Cada nodo (excepto raíz) tiene como mínimo (M)/2 claves.
- * El arbol esta ordenado en orden creciente 
+ * El arbol deber estar ordenado en orden creciente 
+                                                 
+![](Imagenes/btree.png)
                                                 
-# Ejemplo de BTree 
+ # Comlejidad de funciones                
+ 
+ Algoritmo|Tiempo de Complejidad
+ :---:|:---:
+ Insert|O(log(n))
+ Search|O(log(n))
+ Delete|O(log(n))
+ 
+ # Insert
+ 
+ 1.- Cuando el arbol esta vacio, crea nodo raiz e inserta ahi el valor o llave 
+ 2.- Meter llaves siguiendo las propiedades 
+ 3.- Cuando el nodo se llene 
+ 4.- Realizar un split sobre el mediano 
+ 5.- El valor del medio sube y conecta las llaves de la izquierda a un hijo izquierdo y las llaves de la derecha con un hijo derecho.
+ 
+![](Imagenes/insertion.png)
 
-<img width="448" alt="output253" src="https://user-images.githubusercontent.com/65368636/100991604-cecd9980-3518-11eb-833a-107f0c448745.png">
-                                                
-                                                
+ 
+ 
                                                 
                                             
