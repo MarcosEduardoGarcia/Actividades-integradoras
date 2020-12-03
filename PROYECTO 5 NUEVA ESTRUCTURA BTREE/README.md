@@ -49,14 +49,31 @@ Esta es considerada una estructura avanzada que generaliza el Binary Search Tree
  # Insert
  
  1.- Cuando el arbol esta vacio, crea nodo raiz e inserta ahi el valor o llave 
+ 
  2.- Meter llaves siguiendo las propiedades 
+ 
  3.- Cuando el nodo se llene 
+ 
  4.- Realizar un split sobre el mediano 
+ 
  5.- El valor del medio sube y conecta las llaves de la izquierda a un hijo izquierdo y las llaves de la derecha con un hijo derecho.
+ 
  
 ![](Imagenes/insertion.png)
 
  
+ # Search 
  
+1.- Empezamos desde el nodo raiz comparamos valor de la llave del nodo
+2.- Si valor = a la primera llave de ese nodo regresamos el nodo
+3.- Si el valor llega a una hoja regresamos NULL pues no se encuentra
+4.- Cuando se tienen nodos con mas de una clave donde valor > a la primera llave k1 se compara con la siguiente k2 si el valor es menor a la clave que sigue se toma la flecha ubicada entre la primera y segunda llave si es el caso contrario ir por la flecha de la derecha
+5.- Repetir recursivamente 1 a 4 hasta hallar el nodo 
+
+**Ejemplo**
+
+Buscar el 17 en el siguiente BTree
+
+![](Imagenes/search1.png)
                                                 
                                             
