@@ -72,8 +72,120 @@ Esta es considerada una estructura avanzada que generaliza el Binary Search Tree
 
 **Ejemplo**
 
-Buscar el 17 en el siguiente BTree
+Buscar el 17 en el siguiente BTree de orden 3
 
-![](Imagenes/search1.png)
+<img src="Imagenes/search1.png" width="230">
                                                 
-                                            
+ Observamos que no es igual a la raiz así que comparamos con ella 
+ 
+ <img src="Imagenes/search2.png" width="230">
+ 
+ 17 > 11 lo que nos lleva por el camino de la derecha indicado con linea punteada
+ 
+ <img src="Imagenes/search3.png" width="230">
+ 
+ Aqui comparamos con 16 donde 17 > 16 asi que comparamos con la llave siguiente de dicho nodo
+ 
+ <img src="Imagenes/search4.png" width="230">
+ 
+ 17 < 18 por lo que nos lleva por la flecha (puntero) que hay entre 16 y 18 
+ 
+ <img src="Imagenes/search5.png" width="230">
+ 
+ llegando asi a 17 nuestra meta 
+ 
+  <img src="Imagenes/search6.png" width="230">
+  
+  # remove
+  
+  Talvez esta represente la funcion mas elaborada debido a los multiples casos que se presentan 
+  
+  **Caso I**
+  
+  Borrar nodos Hoja
+  
+  a) Borrar un nodo y que esto no rompa la regla de cantidad minima de nodos: Solo eliminar 
+  
+  b) Borrar un nodo y que se rompa la condicion de cantidad minima de nodos:
+  
+      - Pedimos prestado una llave del hermano vecino inmediato de izquierda a derecha
+      - Primero, vistamos al sibling izquierdo si tiene mas del numero mínimo de nodos tomamos uno
+      - Sino ahora checamos al sibling derecho 
+      
+      Si los dos nodos hermanos inmediatos ya tienen un número mínimo de claves, aplicamos un merge con el nodo hermano izquierdo o el nodo hermano derecho. Esta fusión se             realiza a través del nodo padre.
+  
+  **Caso II**
+  
+  Borrar Nodos Internos
+  
+  1.- Si la llave a eliminar se encuentra en el nodo interno, ocurren los siguientes casos
+  
+  a) El nodo interno el cual será borrado es reemplazado por un predecesor si el hijo izquierdo tiene un numero de llaves por encima del mínimo
+  
+  b) El nodo interno el cual será borrado es reemplazado por un sucesor si el hijo derecho tiene un numero de llaves por encima del mínimo
+  
+  c) Si alguno de los niños tiene exactamente un número mínimo de llaves, haga merge entre los hijos izquierdo y derecho.
+  
+  **Caso III**
+  
+  Borrar nodos que reduzcan el nivel del arbol
+  
+  Si la llave de destino se encuentra en un nodo interno, y la eliminación de la llave conduce a una menor cantidad de llaves en el nodo (es decir, menos del mínimo requerido),   busque el predecesor en orden y el sucesor en orden. Si ambos niños contienen un número mínimo de llaves, no se podrá realizar el préstamo. Esto lleva al Caso II (3)
+ 
+ 
+  Nuevamente, busque al hermano para que le preste una llave. Pero, si el hermano también tiene solo un número mínimo de claves, combine el nodo con el hermano junto con el       padre. Organice a los niños en orden creciente
+  
+  **Ejemplos**
+  
+  <img src="Imagenes/deletion.jpg" width="500">
+  
+  
+  # Uso de la Estructura
+  
+  BTree nacio de la necesidad de queer acceder a los datos de una manera mas rápida y eficiente dichos datos se encontraban en medios de almacenamiento físico como Discos duros,   estos tipos de dispositivos son mucho mas lentos pero de mayores capacidades 
+  
+  Como pudimos observar la diferencia entre este tipo de arbol y el resto es el hecho de poder guardar mas de un valor en un nodo lo que reduce considerablemente la altura del     árbol y esto se tradujo en que cada nodo ocupe un bloque de disco, o un tamaño análogo en el dispositivo, aumentando la eficacia.
+  
+  **Aplicaciones Reales**
+  
+  Bases de datos:
+  
+  Una base de datos es un conjunto de datos pertenecientes a un mismo contexto y almacenados sistemáticamente para su posterior uso. En este sentido; una biblioteca puede    considerarse una base de datos compuesta en su mayoría por documentos y textos impresos en papel e indexados para su consulta. Actualmente, y debido al desarrollo tecnológico de campos como la informática y la electrónica, la mayoría de las bases de datos están en formato digital, SQL apuesta por la incoporación de este tipo de arboles 
+  
+  
+  Sistema de Archivos 
+  
+  El sistema de archivos o sistema de ficheros es el componente del sistema operativo encargado de administrar y facilitar el uso de las memorias periféricas, ya sean secundarias o terciarias. Sus principales funciones son la asignación de espacio a los archivos, la administración del espacio libre y del acceso a los datos resguardados. 
+  
+
+  # Especificaciones técnicas 
+  
+  Se incluye en este repositorio los siguientes archivos:
+  
+  * Btree.hpp
+  * Arma.h
+  * BaseSql.h
+  * mainEstructura.cpp
+  * mainProyecto.cpp
+  * GTAV PROGRA.txt
+  
+  
+  Al compilar el mainEstructura se mostrara un menu que permitirá crear un Btree y realizar las funciones básicas
+  
+  - Añadir valores
+  - Borrar valores
+  - Buscar valores
+  - Imprimr Recorrido (Este se realiza de la misma forma que se haria inorder) para observar que los nodos estan en la estructura 
+  
+  Al compilar el mainProyecto se mostrara una pequeña aplicación cargando las armas del gtaV de entregas anteriores pudiendo verlas todas, eliminarlas, hacer busquedas y guardar lo que quede en la estrcutura de Btree comprobando el uso de esta estructura
+  
+  # Referencias 
+  
+  B-Tree : Searching and Insertion. (2020). Retrieved 3 December 2020, from https://iq.opengenus.org/b-tree-searching-insertion/
+  
+  B-tree. (2020). Retrieved 3 December 2020, from https://www.programiz.com/dsa/b-tree
+  
+  Introduction of B-Tree - GeeksforGeeks. (2020). Retrieved 3 December 2020, from https://www.geeksforgeeks.org/introduction-of-b-tree-2/?ref=lbp
+  
+  B-Tree Visualization. (2020). Retrieved 3 December 2020, from https://www.cs.usfca.edu/~galles/visualization/BTree.html
+  
