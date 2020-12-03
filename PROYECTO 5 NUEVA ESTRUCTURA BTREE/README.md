@@ -11,7 +11,7 @@ Esta es considerada una estructura avanzada que generaliza el Binary Search Tree
 # Propiedades de un BTree
 
 * Este tipo de arbol cuenta con un grado u orden nombrado usualmente con la letra m, este parametro corresponde al numero de hijos que puede tener como maximo cada nodo
-* En relacion a m se pueden tener una cierta cantidad de llaves expresadas como (m-1) llaves esto sera un arreglo de llaves y un arreglo de punteros como se muestra en el ejemplo un Btree de orden 5 cuenta con cuatro llaves en el nodo y cinco punteros a nuevos nodos que tendran este mismo orden 
+* En relacion a m se pueden tener una cierta cantidad de llaves expresadas como (m-1) llaves esto sera como un arreglo de llaves ademas se tendrá un arreglo de punteros como se muestra en el ejemplo un Btree de orden 5 cuenta con cuatro llaves en el nodo y cinco punteros a nuevos nodos que tendran este mismo orden 
 
                                                 ______________________________
                                                 | | K1| | K2 | | K3 | | K4 | | 
@@ -38,7 +38,7 @@ Esta es considerada una estructura avanzada que generaliza el Binary Search Tree
                                                  
 ![](Imagenes/btree.png)
                                                 
- # Comlejidad de funciones                
+ # Complejidad de funciones                
  
  Algoritmo|Tiempo de Complejidad
  :---:|:---:
