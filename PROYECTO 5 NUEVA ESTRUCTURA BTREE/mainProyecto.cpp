@@ -5,51 +5,6 @@ using namespace std;
 void menu();
 
 int main(){
-    /*
-    BTree t(3); // A B-Tree with minium degree 3
-    t.insert(1);
-    t.insert(2);
-    t.insert(3);
-    t.insert(4);
-    t.insert(5);
-    t.insert(6);
-    t.insert(7);
-    t.insert(8);
-    t.insert(9);
-    t.insert(10);
-
-    cout << "Traversal of the constucted tree is ";
-    t.traverse();
-
-    int k = 6;
-    (t.search(k) != NULL)? cout << "\nPresent" : cout << "\nNot Present";
-
-    k = 15;
-    (t.search(k) != NULL)? cout << "\nPresent" : cout << "\nNot Present";
-    cout << endl;
-    cout << t.search(15);
-
-
-    /*
-    BTree *ejemplo = new BTree(3);
-
-    ejemplo->CargarArreglo();
-    ejemplo->CargarEjemplo();
-    ejemplo->traverse();
-
-    */
-    /*
-    BaseSql *Prueba = new BaseSql();
-
-    Prueba-> CargarArmas();
-    Prueba->Buscar(6);
-    Prueba->Eliminar(7);
-    Prueba->Buscar(7);
-    Prueba->Eliminar(0);
-    cout << endl;
-    Prueba->MostrarElementos();
-    Prueba->Guardar();
-    */
     menu();
     return 0;
 }
